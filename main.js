@@ -1,3 +1,4 @@
+
 const botoes = document.querySelectorAll(".botao");
 const conteudo = document.querySelectorAll(".aba-conteudo");
 const tempo = document.querySelectorAll(".contador");
@@ -12,13 +13,15 @@ let minuto;
 let horas;
 let dias;
 segundos=(tempoObjetivo1-agora)/1000
-minutos=segundos/60
+minutos=segundos%60
 horas=minutos/60
 dias=horas/24
 segundos=Math.floor(segundos);
 minutos=Math.floor(minutos);
 horas=Math.floor(horas);
 dias=Math.floor(dias);
+
+
 tempo[0].textContent=`Faltam ${dias} dias, ${horas} horas, ${minutos} minutos e ${segundos} segundos`
 tempo[1].textContent = agora
 
